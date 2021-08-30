@@ -7,10 +7,8 @@ Write a function named `addOne` that takes an array of numbers, and returns a ne
 
 Use `forEach` to loop over the input array and work with each value.  Push the new value into a local array. Return the local array;
 ------------------------------------------------------------------------------------------------ */
-// let arr=[5,10,15];
 
 const addOne = (arr) => {
-
   // Solution code here...
   let newArr=[];
   arr.forEach(item => {
@@ -64,12 +62,11 @@ Then, write a function named `speaker` that takes in an array of strings and a c
 
 Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array. 
 ------------------------------------------------------------------------------------------------ */
-// let word = ['hello','301d','course'];
+
 const greeting = (word) => {
   // Solution code here...
   return word.toUpperCase()+'!';
 
- 
 };
 
 const speaker = (words, callback) => {
@@ -81,6 +78,7 @@ const speaker = (words, callback) => {
     
   });
   return newName;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -98,31 +96,22 @@ Within the addNumbers function, invoke the callback function as many times as ne
 
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
+
 const addValues = (arr, value) => {
-  // console.log(arr,'this is the arr');
   // Solution code here...
   arr.push(value);
-  // console.log(arr);
 
 };
 
-
 const addNumbers = (num, arr, times, callback) => {
-  // console.log(times);
-// console.log(callback(arr));
-
   // Solution code here...
   for (let i = 0; i < times; i++) {
     callback(arr,num);
 
-  }
+  };
 
 return arr;
-  }
-
-
-  
-
+  };
 
 /* ------------------------------------------------------------------------------------------------
 
@@ -141,7 +130,6 @@ The inventory is formatted like this:
 
 This function should use forEach to populate your grocery list based on the store's inventory. If the item is available, add it to your list. Return the final list.
 ------------------------------------------------------------------------------------------------ */
-
 let inventory = [
   { name: 'apples', available: true },
   { name: 'pears', available: true },
@@ -150,15 +138,14 @@ let inventory = [
   { name: 'blueberries', available: false }
 ]
 
-const createList = (inventory) => {
+const createList = (availableItems) => {
   // Solution code here...
-  let value = ["available"];
 
   let list=[];
 
   inventory.forEach(item => {
-    if (value == true) {
-      list.push(item["name"]);
+    if (item.available === true) {
+      list.push(item.name);
       
     
     // console.log(availableItems);
