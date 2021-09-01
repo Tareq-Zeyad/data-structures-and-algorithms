@@ -8,7 +8,15 @@ Write a function called addTwo that takes in an array and adds two to every valu
 
 const addTwo = (arr) => {
   // Solution code here...
-  // I will do it later
+
+  let newValues=[];
+  arr.forEach(item => {
+newValues.push(item + 2);
+  });
+  return newValues;
+
+ 
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -21,6 +29,15 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 
 const typeNum = (arr) => {
   // Solution code here...
+
+  let onlyNum = arr.filter((num) => {
+    if (typeof(num) === 'number'){
+      return true;
+    }
+    // typeoff is used to determine the type of a data such as string, number or boolean ...etc
+  })
+  return onlyNum;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -33,6 +50,14 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 
 const containsAnd = (arr) => {
   // Solution code here...
+
+  let And = arr.filter ((item) => {
+    if (item.includes('and')){
+      return true;
+    }
+  })
+  return And;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -45,6 +70,14 @@ For example, oddValues([1,2,3]) returns [1,3].
 
 const oddValues = (arr) => {
   // Solution code here...
+
+  let oddValues = arr.filter((num) => {
+    if (num%2 !== 0){
+      return true
+    }
+  })
+  return oddValues;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -57,6 +90,15 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 
 const notInFirstArray = (forbiddenValues, arr) => {
   // Solution code here...
+
+  let allArr = arr.filter ((item) => {
+    if (forbiddenValues.includes(item) === false ){
+      return true
+    }
+
+  })
+  return allArr;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
