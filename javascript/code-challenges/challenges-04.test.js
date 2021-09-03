@@ -39,7 +39,17 @@ For example: 'Cat' would come before 'apple'
 ------------------------------------------------------------------------------------------------ */
 
 const sortNames = (arr) => {
+  let Names = [];
   // Solution code here...
+  Names = arr.sort ((a,b) => {
+    if (a > b)
+    return 1;
+    else if (a < b){
+    return -1;}
+    else {
+    return 0;}
+  })
+  return Names;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -50,8 +60,20 @@ Write a function called sortNumbers that takes an array of numbers and sorts the
 HINT: Beware... JS default is "Lexical" ordering.
 ------------------------------------------------------------------------------------------------ */
 
+// Don't return true/false in sort.
+// < '0' to sort a at first.
+// > '0' to sort b at first.
+// == '0' then a & b equal
+
 const sortNumbers = (arr) => {
+  let num = [];
   // Solution code here...
+  num = arr.sort((a,b) => {
+    if (a - b < 0){
+      return a-b
+    }
+  })
+  return num;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -63,7 +85,14 @@ HINT: Do it with a custom sort callback, not with using `.reverse()`. ;)
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
+  let num = [];
   // Solution code here...
+  num = arr.sort((a,b) => {
+    if (b - a < 0){
+      return b - a
+    }
+  })
+  return num;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -77,7 +106,17 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetize = (arr) => {
+  let words = [];
   // Solution code here...
+  words = arr.sort((a,b) => {
+    if (a<b){
+      return -1;
+    }
+    else if (a>b){
+      return 1
+    }
+  })
+  return words;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -94,7 +133,17 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
+  let price = [];
   // Solution code here...
+  price = arr.sort((a,b) =>{
+    if (a.price < b.price){
+      return -1;
+    }
+    else if (a.price > b.price){
+      return 1;
+    }
+  })
+  return price;
 };
 
 /* ------------------------------------------------------------------------------------------------
