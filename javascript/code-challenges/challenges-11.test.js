@@ -20,9 +20,9 @@ Becomes:
 
 function transformToLis(obj){
   // Solution code here...
-  let list = [];
-  Object.entries(obj).forEach(([item, item2]) => {
-    list.push((`<li>${item}: ${item2}</li>`));
+  let list=[];
+  Object.entries(obj).forEach(([key,value]) => {
+    list.push((`<li>${key}: ${value}</li>`))
   });
   return list;
 }
@@ -39,16 +39,15 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 
 const count = (target, input) => {
   // Solution code here...
-  let amount = 0;
+  let amount=0;
   input.map(item => {
     item.map(
       element => {
-        if (element === target) {
+        if (element === target){
           amount += 1;
-        }
-
-      });
-  });
+      }
+      })
+  })
   return amount;
 };
 
@@ -64,6 +63,12 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 
 const totalSum = (input) => {
   // Solution code here...
+  let sumArr = [];
+  sumArr = input.map(item => {
+
+    return item.reduce(callBackFunction, 0);
+  });
+  return sumArr.reduce(callBackFunction, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -146,6 +151,16 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
+  let newArr = '';
+  newArr = data.filter((item) => {
+      if (item.gender === 'female' || item.gender === 'male') {
+        return item;
+      }
+    }).map((item) => {
+      return item.name;
+    })
+    .join(' and ');
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
