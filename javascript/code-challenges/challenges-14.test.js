@@ -181,6 +181,21 @@ Here is a sample board:
 
 const detectTicTacToeWin = (board) => {
   // Solution code here...
+  let playFlag = false;
+  let arrCheck = (row1, col1, row2, col2, row3, col3) => {
+    if (board[row1][col1] === board[row2][col2] && board[row2][col2] === board[row3][col3] && board[row1][col1] === board[row3][col3] && board[row1][col1] !== '')
+    playFlag = true;
+  };
+
+  arrCheck(0, 0, 0, 1, 0, 2);
+  arrCheck(0, 0, 1, 0, 2, 0);
+  arrCheck(1, 0, 1, 1, 1, 2);
+  arrCheck(0, 1, 1, 1, 2, 1);
+  arrCheck(2, 0, 2, 1, 2, 2);
+  arrCheck(0, 2, 1, 2, 2, 2);
+  arrCheck(0, 0, 1, 1, 2, 2);
+  arrCheck(2, 0, 1, 1, 0, 2);
+  return playFlag;
 };
 
 /* ------------------------------------------------------------------------------------------------
