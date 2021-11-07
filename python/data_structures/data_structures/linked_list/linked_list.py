@@ -70,6 +70,67 @@ def includes(self, valueSearched):
         return ("Empty")
 
 
+def append(self, value):
+    """
+    Add a value at the end of a linked list, if no value exists, it will be the head of the list.
+    """
+    current = self.head
+
+    if(current != None):
+        while(True):
+            if current.next != None:
+                current = current._next
+            else:
+                current.next = Node(value)
+                break
+    else:
+        self.head = Node(value)
+
+
+def insert_before(self, before_value, value):
+    """
+    Insert a given value before a specificed itme in the linked list.
+    """
+    current = self.head
+
+    if(current != None):
+        while(True):
+            if current._next == None:
+                if current.data == before_value:
+                    self.head = Node(value, current)
+                    break
+                else:
+                    break
+            elif current._next.data == before_value:
+                current._next = Node(value, current._next)
+                break
+            else:
+                current = current._next
+    else:
+        self.head = Node(value)
+
+
+def insert_after(self, after_value, value):
+    """
+    Insert a given value after a specificed item in the linked list.
+    """
+    current = self.head
+
+    if(current != None):
+        while(True):
+            if current._next == None:
+                if current.data == after_value:
+                    current._next = Node(value, current._next)
+                    break
+                else:
+                    break
+            elif current.data == after_value:
+                current._next = Node(value, current._next)
+                break
+            else:
+                current = current._next
+
+
 if __name__ == '__main__':
 
     ll = LinkedList()
