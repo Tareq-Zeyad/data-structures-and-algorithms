@@ -49,3 +49,31 @@ def __str__(self):
             current = current.next
         output += "None"
         return output
+
+
+def includes(self, valueSearched):
+    """
+    method to search for a specifc value
+    """
+    current = self.head
+    if self.head != None:
+        while current.next != None:
+            if current.value == valueSearched:
+                print("true")
+                return True
+
+            current = current.next
+        print("false")
+        return False
+    else:
+        print("Empty")
+        return ("Empty")
+
+
+if __name__ == '__main__':
+
+    ll = LinkedList()
+
+    ll.append(7)
+    ll.append(1)
+    ll.append(2)
