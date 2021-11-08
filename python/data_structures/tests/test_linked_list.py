@@ -69,9 +69,55 @@ def test_insert_after(ll):
     assert expected == actual
 
 
+
+def test_greater_than_the_length(ll):
+
+    expected = 'k is greater than the length of the linked list'
+    actual = ll.kthFromEnd(10)
+    assert expected == actual
+
+
+def test_k_and_the_length_of_the_list_are_the_same(ll):
+    expected = 10
+    actual = ll.kthFromEnd(3)
+    assert expected == actual
+
+
+def test_k_is_not_a_positive_integer(ll):
+    expected = "Please input positive numbers"
+    actual = ll.kthFromEnd(-3)
+    assert expected == actual
+
+
+def test__linked_list_is_of_a_size_1():
+    ll = LinkedList()
+    ll.append(3)
+    expected = 3
+    actual = ll.kthFromEnd(0)
+    assert expected == actual
+
+
+def test__Happy_Pat_K_is_not_in_middle():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(4)
+    ll.append(2)
+    ll.append(15)
+    ll.append(6)
+
+    assert ll.kthFromEnd(1) == 20
+    assert ll.kthFromEnd(2) == 4
+    assert ll.kthFromEnd(3) == 8
+
+
 @pytest.fixture
 def ll():
     ll = LinkedList()
+
+@pytest.fixture
+def ll():
+    ll = LinkedList()
+
 
     ll.append(10)
     ll.append(30)

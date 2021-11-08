@@ -1,4 +1,25 @@
 
+# code-challenge 7
+## Return the node’s value that is k places from the tail of the linked list.
+<br>
+
+## Efficiency:
+## Big O(n) : linear approach.
+
+<br>
+
+## Tasks Checklist:
+- ### [x] = completed.
+
+- ### [x] Where k is greater than the length of the linked list
+- ### [x] Where k and the length of the list are the same
+- ### [x] Where k is not a positive integer
+- ### [x] Where the linked list is of a size 1
+- ### [x] “Happy Path” where k is not at the end, but somewhere in the middle of the linked list
+
+
+
+
 # code-challenge 6
 # Single Linked List - Insertions.
 
@@ -62,6 +83,10 @@
 ## Task lists
 
 - ### [x] = completed.
+=======
+
+- ### [x] = completed.
+
 
 - ### [x] Can successfully instantiate an empty linked list
 
@@ -77,5 +102,7 @@
 
 
 
+
 - ### [x] Can properly return a collection of all the values that exist in the linked list
+
 
