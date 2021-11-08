@@ -69,6 +69,7 @@ def test_insert_after(ll):
     assert expected == actual
 
 
+
 def test_greater_than_the_length(ll):
 
     expected = 'k is greater than the length of the linked list'
@@ -112,6 +113,12 @@ def test__Happy_Pat_K_is_not_in_middle():
 @pytest.fixture
 def ll():
     ll = LinkedList()
+
+@pytest.fixture
+def ll():
+    ll = LinkedList()
+
+
     ll.append(10)
     ll.append(30)
     ll.append(500)

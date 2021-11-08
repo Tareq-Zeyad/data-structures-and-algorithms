@@ -131,6 +131,7 @@ def insert_after(self, after_value, value):
                 current = current._next
 
 
+
 def kthFromEnd(self, input):
     current = self.head
 
@@ -163,6 +164,7 @@ def kthFromEnd(self, input):
                 current = current._next
     else:
         return None
+
 
 
 if __name__ == '__main__':
