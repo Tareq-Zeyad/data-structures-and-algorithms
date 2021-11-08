@@ -72,8 +72,9 @@ def test_insert_after(ll):
 @pytest.fixture
 def ll():
     ll = LinkedList()
-    ll.append(11)
-    ll.append(20)
-    ll.append(400)
+
+    ll.append(10)
+    ll.append(30)
+    ll.append(500)
 
     return ll
