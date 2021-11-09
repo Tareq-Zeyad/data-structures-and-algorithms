@@ -1,5 +1,6 @@
 from linked_list import __version__
-from linked_list.linked_list import Node,  LinkedList
+from linked_list import Node,  LinkedList
+
 import pytest
 
 
@@ -7,120 +8,475 @@ def test_version():
     assert __version__ == '0.1.0'
 
 
-def test_empty_linked_list():
-    ll = LinkedList()
-    expected = None
-    actual = ll.head
-    assert expected == actual
+def test_node_has_int_data():
+    # Arrange any data that you need to run your test
+    expected = 1
 
+    # Act on the subject of the test to produce some actual output
+    node = Node(1)
+    actual = node.data
 
-def test_inserting_one_value():
-    ll = LinkedList()
-    ll.insert(3)
-    expected = "value added"
-    actual = ll.insert(3)
-    assert expected == actual
-
-
-def test_head_pointing_to_next_node():
-    node = Node(10)
-    expected = 10
-    actual = node.value
+    # Assert
     assert actual == expected
 
 
-def test_multi_values_added(ll):
-    expected = 3
-    actual = ll.countering()
-    assert expected == actual
+def test_node_has_str_data():
+    # Arrange any data that you need to run your test
+    expected = "a"
+
+    # Act on the subject of the test to produce some actual output
+    node = Node("a")
+    actual = node.data
+
+    # Assert
+    assert actual == expected
 
 
-def test_all_values_in_LL(ll):
-    expected = 'head -> [10] -> [30] -> [500] -> None'
-    actual = ll.__str__()
-    assert expected == actual
+def test_node_is_a_Node():
+    # Arrange any data that you need to run your test
+    expected = "Node"
+
+    # Act on the subject of the test to produce some actual output
+    node = Node(1)
+    actual = type(node).__name__
+
+    # Assert
+    assert actual == expected
 
 
-def test_value_found(ll):
-
-    expected = False
-    actual = ll.includes("Issa")
-    assert expected == actual
+def test_node_without_value():
+    with pytest.raises(TypeError):
+        node = Node()
 
 
-def test_value_not_found(ll):
+def test_new_linked_list_is_empty():
+    expected = None
 
+    ll = LinkedList()
+    actual = ll.head
+
+    assert actual == expected
+
+
+def test_linked_list_insert():
+    # Arrange
+    expected = 1
+    ll = LinkedList()
+
+    # Act
+    ll.insert(1)
+    node = ll.head
+    actual = node.data
+
+    # Assert
+    assert actual == expected
+
+
+def test_linked_list_insert_twice():
+    # Arrange
+    expected = 0
+    ll = LinkedList()
+
+    # Act
+    ll.insert(1)
+    ll.insert(0)
+    node = ll.head
+    actual = node.data
+
+    # Assert
+    assert actual == expected
+    assert ll.head._next.data == 1
+
+
+def test_linked_list_includes():
+    # Arrange
     expected = True
-    actual = ll.includes(10)
-    assert expected == actual
+    ll = LinkedList()
+
+    # Act
+    ll.insert(0)
+    ll.insert(5)
+    ll.insert(9)
+    actual = ll.includes(5)
+
+    # Assert
+    assert actual == expected
 
 
-def test_insert_before(ll):
-    ll.insert_before(30, 40)
-    expected = 'head -> [10] -> [40] -> [30] -> [500] -> None'
-    actual = ll.__str__()
-    assert expected == actual
+def test_linked_list_includes_fail():
+    # Arrange
+    expected = False
+    ll = LinkedList()
+
+    # Act
+    ll.insert(0)
+    ll.insert(5)
+    ll.insert(9)
+    actual = ll.includes(20)
+
+    # Assert
+    assert actual == expected
 
 
-def test_insert_after(ll):
-    ll.insert_after(30, 40)
-    expected = 'head -> [10] -> [30] -> [40] -> [500] -> None'
-    actual = ll.__str__()
-    assert expected == actual
+def test_linked_list_includes_first_item():
+    # Arrange
+    expected = True
+    ll = LinkedList()
+
+    # Act
+    ll.insert(0)
+    ll.insert(5)
+    ll.insert(9)
+    actual = ll.includes(0)
+
+    # Assert
+    assert actual == expected
 
 
+def test_linked_list_includes_last_item():
+    # Arrange
+    expected = True
+    ll = LinkedList()
 
-def test_greater_than_the_length(ll):
+    # Act
+    ll.insert(0)
+    ll.insert(5)
+    ll.insert(9)
+    actual = ll.includes(9)
 
-    expected = 'k is greater than the length of the linked list'
-    actual = ll.kthFromEnd(10)
-    assert expected == actual
+    # Assert
+    assert actual == expected
 
 
-def test_k_and_the_length_of_the_list_are_the_same(ll):
-    expected = 10
+def test_linked_list_to_string():
+    # Arrange
+    expected = "{ 29 } -> { 9 } -> { 5 } -> { 0 } -> NULL"
+    ll = LinkedList()
+
+    # Act
+    ll.insert(0)
+    ll.insert(5)
+    ll.insert(9)
+    ll.insert(29)
+    actual = str(ll)
+
+    # Assert
+    assert actual == expected
+
+
+def test_linked_empty_list_to_string():
+    # Arrange
+    expected = "NULL"
+    ll = LinkedList()
+
+    # Act
+    actual = str(ll)
+
+    # Assert
+    assert actual == expected
+
+
+def test_linked_list_append():
+    # Arrange
+    expected = "{ 9 } -> { 5 } -> { 0 } -> { 29 } -> NULL"
+    ll = LinkedList()
+
+    # Act
+    ll.insert(0)
+    ll.insert(5)
+    ll.insert(9)
+    ll.append(29)
+    actual = str(ll)
+
+    # Assert
+    assert actual == expected
+
+
+def test_linked_list_append_multi_values():
+    # Arrange
+    expected = "{ 0 } -> { 5 } -> { 9 } -> { 29 } -> NULL"
+    ll = LinkedList()
+
+    # Act
+    ll.append(0)
+    ll.append(5)
+    ll.append(9)
+    ll.append(29)
+    actual = str(ll)
+
+    # Assert
+    assert actual == expected
+
+
+def test_linked_list_append_empty():
+    # Arrange
+    expected = "{ 29 } -> NULL"
+    ll = LinkedList()
+
+    # Act
+    ll.append(29)
+    actual = str(ll)
+
+    # Assert
+    assert actual == expected
+
+
+def test_linked_list_insert_before():
+    # Arrange
+    expected = "{ 9 } -> { 29 } -> { 5 } -> { 0 } -> NULL"
+    ll = LinkedList()
+
+    # Act
+    ll.insert(0)
+    ll.insert(5)
+    ll.insert(9)
+    ll.insert_before(5, 29)
+    actual = str(ll)
+
+    # Assert
+    assert actual == expected
+
+
+def test_linked_list_insert_before_not_found():
+    # Arrange
+    expected = "{ 9 } -> { 7 } -> { 0 } -> NULL"
+    ll = LinkedList()
+
+    # Act
+    ll.insert(0)
+    ll.insert(7)
+    ll.insert(9)
+    ll.insert_before(5, 29)
+    actual = str(ll)
+
+    # Assert
+    assert actual == expected
+
+
+def test_linked_list_insert_before_first():
+    # Arrange
+    expected = "{ 29 } -> { 1 } -> NULL"
+    ll = LinkedList()
+
+    # Act
+    ll.insert(1)
+    ll.insert_before(1, 29)
+    actual = str(ll)
+
+    # Assert
+    assert actual == expected
+
+
+def test_linked_list_insert_after():
+    # Arrange
+    expected = "{ 9 } -> { 5 } -> { 25 } -> { 0 } -> NULL"
+    ll = LinkedList()
+
+    # Act
+    ll.insert(0)
+    ll.insert(5)
+    ll.insert(9)
+    ll.insert_after(5, 25)
+    actual = str(ll)
+
+    # Assert
+    assert actual == expected
+
+
+def test_linked_list_insert_after_last():
+    # Arrange
+    expected = "{ 9 } -> { 5 } -> { 0 } -> { 25 } -> NULL"
+    ll = LinkedList()
+
+    # Act
+    ll.insert(0)
+    ll.insert(5)
+    ll.insert(9)
+    ll.insert_after(0, 25)
+    actual = str(ll)
+
+    # Assert
+    assert actual == expected
+
+
+def test_linked_list_kth():
+    # Arrange
+    expected = 8
+    ll = LinkedList()
+
+    # Actual
+    ll.insert(2)
+    ll.insert(8)
+    ll.insert(3)
+    ll.insert(1)
+
     actual = ll.kthFromEnd(3)
-    assert expected == actual
+
+    # Assert
+    assert actual == expected
 
 
-def test_k_is_not_a_positive_integer(ll):
-    expected = "Please input positive numbers"
-    actual = ll.kthFromEnd(-3)
-    assert expected == actual
-
-
-def test__linked_list_is_of_a_size_1():
+def test_second_linked_list_kth():
+    # Arrange
+    expected = 2
     ll = LinkedList()
-    ll.append(3)
-    expected = 3
+
+    # Actual
+    ll.insert(2)
+    ll.insert(8)
+    ll.insert(3)
+    ll.insert(1)
+
+    actual = ll.kthFromEnd(4)
+
+    # Assert
+    assert actual == expected
+
+
+def test_third_linked_list_kth():
+    # Arrange
+    expected = 10
+    ll = LinkedList()
+
+    # Actual
+    ll.insert(2)
+    ll.insert(10)
+    ll.insert(86)
+    ll.insert(6)
+    ll.insert(3)
+    ll.insert(1)
+
+    actual = ll.kthFromEnd(5)
+
+    # Assert
+    assert actual == expected
+
+
+def test_fourth_linked_list_kth():
+    # Arrange
+    expected = 2
+    ll = LinkedList()
+
+    # Actual
+    ll.insert(2)
+    ll.insert(10)
+    ll.insert(86)
+    ll.insert(6)
+    ll.insert(3)
+    ll.insert(1)
+
     actual = ll.kthFromEnd(0)
-    assert expected == actual
+
+    # Assert
+    assert actual == expected
 
 
-def test__Happy_Pat_K_is_not_in_middle():
-    ll = LinkedList()
-    ll.append(1)
-    ll.append(4)
-    ll.append(2)
-    ll.append(15)
-    ll.append(6)
-
-    assert ll.kthFromEnd(1) == 20
-    assert ll.kthFromEnd(2) == 4
-    assert ll.kthFromEnd(3) == 8
-
-
-@pytest.fixture
-def ll():
+def test_linked_list_kth_greaterthan():
+    # Arrange
+    expected = None
     ll = LinkedList()
 
-@pytest.fixture
-def ll():
+    # Actual
+    ll.insert(2)
+    ll.insert(10)
+    ll.insert(86)
+    ll.insert(6)
+    ll.insert(3)
+    ll.insert(1)
+
+    actual = ll.kthFromEnd(8)
+
+    # Assert
+    assert actual == expected
+
+
+def test_linked_list_kth_same_length():
+    # Arrange
+    expected = 2
     ll = LinkedList()
 
+    # Actual
+    ll.insert(2)
+    ll.insert(10)
+    ll.insert(86)
+    ll.insert(6)
+    ll.insert(3)
+    ll.insert(1)
 
-    ll.append(10)
-    ll.append(30)
-    ll.append(500)
+    actual = ll.kthFromEnd(6)
 
-    return ll
+    # Assert
+    assert actual == expected
+
+
+def test_linked_list_kth_negative_k():
+    # Arrange
+    expected = None
+    ll = LinkedList()
+
+    # Actual
+    ll.insert(2)
+    ll.insert(10)
+    ll.insert(86)
+    ll.insert(6)
+    ll.insert(3)
+    ll.insert(1)
+
+    actual = ll.kthFromEnd(-5)
+
+    # Assert
+    assert actual == expected
+
+
+def test_linked_list_size_1():
+    # Arrange
+    expected = 10
+    ll = LinkedList()
+
+    # Actual
+    ll.insert(10)
+
+    actual = ll.kthFromEnd(1)
+
+    # Assert
+    assert actual == expected
+
+
+def test_linked_list_kth_happy_path():
+    # Arrange
+    expected = 86
+    ll = LinkedList()
+
+    # Actual
+    ll.insert(2)
+    ll.insert(10)
+    ll.insert(86)
+    ll.insert(6)
+    ll.insert(3)
+
+    actual = ll.kthFromEnd(3)
+
+    # Assert
+    assert actual == expected
+
+
+def test_linked_list_zip():
+    # Arrange
+    expected = "{ 1 } -> { 2 } -> { 3 } -> { 4 } -> { 5 } -> { 6 } -> NULL"
+    first_ll = LinkedList()
+    second_ll = LinkedList()
+
+    # Actual
+    first_ll.append(1)
+    first_ll.append(2)
+    first_ll.append(3)
+
+    second_ll.append(4)
+    second_ll.append(5)
+    second_ll.append(6)
+
+    newList = LinkedList.zipLists(first_ll, second_ll)
+    actual = str(newList)
+
+    # Assert
+    assert actual == expected
