@@ -1,3 +1,14 @@
+# Code-Challenge 8
+## Return: Linked List, zipped as noted below. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list.
+
+## Efficiency:
+## Big O(n) : linear approach.
+
+## WhiteBoard
+![zip](zip.PNG)
+<br>
+
+
 # code-challenge 7
 ## Return the node’s value that is k places from the tail of the linked list.
 <br>
