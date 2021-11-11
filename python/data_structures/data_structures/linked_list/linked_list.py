@@ -58,7 +58,7 @@ class LinkedList:
     def __str__(self):
         """"
         Returns a string containing all elements that exist within the list, if none it will return NULL only.
-        Example: 
+        Example:
         "{ 29 } -> { 9 } -> { 5 } -> { 0 } -> NULL"
         arguments:
         None
@@ -169,23 +169,26 @@ class LinkedList:
 
     @staticmethod
     def zipLists(first_list, second_list):
-        current = first_list.head
+        first_list = first_list.head
+        second_list = second_list.head
 
-        if(current != None and second_list.head != None):
-            newList = LinkedList()
-            counter = 1
-            while(True):
-                if current._next == None and counter == 2:
-                    newList.append(current.data)
-                    return newList
+        if(not first_list and not second_list):
+            return "No avaliable lists to zip"
+        elif not first_list:
+            return str(second_list)
+        elif not second_list:
+            return str(first_list)
 
-                elif current._next == None and counter == 1:
-                    newList.append(current.data)
-                    counter = 2
-                    current = second_list.head
-                else:
-                    newList.append(current.data)
-                    current = current._next
-        else:
-            raise Exception(
-                "One of the provided arguments does not meet the required type of data/ either linked list is empty...")
+    zip_node = ''
+
+    while first_list and second_list:
+        if second_list:
+            zip_node = first_list.next
+            first_list.next = second_list
+            first_list = zip_node
+
+        if first_list:
+
+            zip_node = second_list.next
+            second_list.next = first_list
+            second_list = zip_node

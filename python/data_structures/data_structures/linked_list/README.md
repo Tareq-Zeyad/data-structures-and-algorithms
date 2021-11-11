@@ -5,7 +5,7 @@
 ## Big O(n) : linear approach.
 
 ## WhiteBoard
-![zip](zip.PNG)
+![zip](zip08.PNG)
 <br>
 
 
