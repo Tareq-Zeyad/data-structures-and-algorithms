@@ -20,4 +20,4 @@
 | -----------| ----------- |
 | _Linked List Data Structure_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/data_structures/data_structures/linked_list/README.md)|
 | _Stacks and Queues Data Structure_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/data_structures/data_structures/stack_and_queue/README.md)|
-|_Binary Trees_| [Link]()|
+|_Binary Trees_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/data_structures/data_structures/trees/README.md)|
