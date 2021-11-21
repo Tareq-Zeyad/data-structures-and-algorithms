@@ -152,3 +152,26 @@ class BinarySearchTree(BinaryTree):
             if item == value:
                 return True
         return False
+
+
+def find_max(self):
+    """
+    A binary tree method which returns the maximun value in the tree
+    input: Binary Tree
+    output: highest value
+    """
+    max_found = 0
+
+    def walk(node):
+        nonlocal max_found
+        if node:
+            if int(node.data) > max_found:
+                max_found = int(node.data)
+            if node.left:
+                walk(node.left)
+            if node.right:
+                walk(node.right)
+        else:
+            max_found = False
+    walk(self.root)
+    return max_found
