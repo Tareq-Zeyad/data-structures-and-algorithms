@@ -1,7 +1,7 @@
 """
 Tests for Binary Tree
 """
-from data_structures.trees.trees import BinaryTree, Node, BinarySearchTree
+from data_structures.data_structures.trees.trees import BinaryTree, Node, BinarySearchTree
 
 
 def test_bfs():
