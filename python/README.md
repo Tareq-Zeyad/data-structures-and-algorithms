@@ -12,6 +12,7 @@
 | _Array Binary Search_| [Link](code_challenges/array-binary-search/README.md)|
 | _Stack Queue Animal Shelter_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/code_challenges/stack_queue_animal_shelter/README.md)|
 | _Stack Queue Brackets_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/code_challenges/stack_queue_brackets/README.md)|
+| _Tree Max_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/data_structures/data_structures/trees/README.md)|
 
 
 ### Data Structures

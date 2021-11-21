@@ -1,7 +1,7 @@
 # Code Challenge 16: Tree- max
 ## Write a binary tree class method which finds the highest value in the tree and return it.
 # Whiteboard proccess:
-![tree_max]()
+![tree_max](tree_max.PNG)
 # Approach & Efficiency
 - ## Approach: White Boarding > TDD > Fixing Code.
 - ## Efficiency: Time: O(log n) Space: O(log n).
