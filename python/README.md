@@ -14,7 +14,7 @@
 | _Stack Queue Brackets_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/code_challenges/stack_queue_brackets/README.md)|
 | _Tree Max_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/data_structures/data_structures/trees/README.md)|
 | _Tree Breadth First_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/code_challenges/tree_breadth_first/README.md)|
-| _Tree Fizz Buzz_| [Link]()|
+| _Tree Fizz Buzz_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/code_challenges/tree_fizz_buzz/README.md)|
 
 
 ### Data Structures
