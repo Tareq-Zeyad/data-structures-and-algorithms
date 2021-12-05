@@ -15,6 +15,7 @@
 | _Tree Max_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/data_structures/data_structures/trees/README.md)|
 | _Tree Breadth First_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/code_challenges/tree_breadth_first/README.md)|
 | _Tree Fizz Buzz_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/code_challenges/tree_fizz_buzz/README.md)|
+| _Insertion Sort_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/code_challenges/insertion_sort/README.md)|
 
 
 ### Data Structures
