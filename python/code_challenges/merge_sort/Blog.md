@@ -8,6 +8,11 @@ python
 [8,4,23,42,16,15]
 ```
 
+## Whiteboard Process.
+![whiteboard](whiteboard_images/whiteboard-merge-sort.PNG)
+<br>
+
+## Steps
 ![whiteboard1](whiteboard_images/whiteboard1.PNG)
 
 First start by dividing the array into 2 parts, the left and right until they are simple enough to compare between.
