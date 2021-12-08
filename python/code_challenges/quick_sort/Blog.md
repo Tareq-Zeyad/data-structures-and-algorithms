@@ -1,5 +1,12 @@
 # Quick Sort Method.
 
+## Whiteboard procces
+![whiteboard](whiteboard_images/Capture.PNG)
+
+<br>
+
+
+## Steps.
 - Input array & the expected output.
 
 ![whiteboard-1](whiteboard_images/whiteboard-1.PNG)
