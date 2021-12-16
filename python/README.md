@@ -18,7 +18,9 @@
 | _Insertion Sort_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/code_challenges/insertion_sort/README.md)|
 | _Merge Sort_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/code_challenges/merge_sort/README.md)|
 | _Quick Sort_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/code_challenges/quick_sort/README.md)|
-| _Hashmap Repeated Words_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/code_challenges/hashmap-repeated-word/README.md)|
+| _Hashmap Repeated Words_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/code_challenges/hashmap_repeated_word/README.md)|
+| _Hashmap left Join_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/code_challenges/hashmap_left_join/README.md)|
+
 
 
 
