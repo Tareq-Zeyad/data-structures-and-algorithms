@@ -20,6 +20,8 @@
 | _Quick Sort_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/code_challenges/quick_sort/README.md)|
 | _Hashmap Repeated Words_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/code_challenges/hashmap_repeated_word/README.md)|
 | _Hashmap left Join_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/code_challenges/hashmap_left_join/README.md)|
+| _Graph-Breadth-First_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/code_challenges/graph-breadth-first/README.md)|
+
 
 
 
@@ -32,3 +34,4 @@
 | _Stacks and Queues Data Structure_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/data_structures/data_structures/stack_and_queue/README.md)|
 |_Binary Trees_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/data_structures/data_structures/trees/README.md)|
 |_Hash Tables_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/data_structures/data_structures/hash_tables/README.md)|
+|_Graphs_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/data_structures/data_structures/graphs/README.md)|
