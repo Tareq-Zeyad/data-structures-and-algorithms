@@ -22,6 +22,7 @@
 | _Hashmap left Join_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/code_challenges/hashmap_left_join/README.md)|
 | _Graph-Breadth-First_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/code_challenges/graph-breadth-first/README.md)|
 | _Graph-Business-Trip_| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/code_challenges/graph-business-trip/README.md)|
+| _Graph-Depth-First| [Link](https://github.com/Tareq-Zeyad/data-structures-and-algorithms/blob/main/python/code_challenges/graph-depth-first/README.md)|
 
 
 
