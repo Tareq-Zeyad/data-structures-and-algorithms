@@ -10,7 +10,7 @@ Determine whether the trip is possible with direct flights, and how much it woul
 ```
 ## Whiteboard Process
 
-![whiteboard]()
+![whiteboard](business-trip.PNG)
 
 ## Approach & Efficiency
 
